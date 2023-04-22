@@ -1,38 +1,8 @@
 .content {
-  grid-area: c;
   display: flex;
   flex-direction: column;
 }
 
-.mainFotoWrapper {
-  overflow: hidden;
-  height: 150px;
-}
-
-.mainFotoWrapper img {
-  object-fit: cover;
-  width: 100%;
-  height: auto;
-}
-
-.aboutMe {
-    padding: 10px 0;
-}
-
-.aboutMe img {
-  width: 150px;
-  height: 150px;
-  margin-right: 20px;
-}
-
-.description {
-    display: inline-block;
-    font-size: 18px;
-}
-
-.description h3 {
-    margin: 5px 0;
-}
 
 
 

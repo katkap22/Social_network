@@ -1,24 +1,23 @@
 .navbar {
     grid-area: n;
-    background-color:rgb(127, 255, 249);
-    padding:10px;
+    background-color: rgb(127, 255, 249);
+    padding: 20px;
 }
 
-.item {
-  color: gray;
-  font-size: 20px;
+.item a {
+    display: block;
+    margin-top: 10px;
+    color: gray;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-.item.active {
-  color: rgb(185, 159, 14);
-  font-weight: bold;
+.item a.active{
+    color: rgb(185, 159, 14);
+    font-weight: bold;
 }
 
-.itemWrapper {
-  margin-top: 10px;
-} 
-
-.navbar :last-child {
-  margin-top: 30px;
-}
+/*div .navbar:last-child {*/
+/*    margin-top: 30px;*/
+/*}*/
 

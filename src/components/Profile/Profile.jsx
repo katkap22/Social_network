@@ -1,27 +1,20 @@
 import React from "react";
 import MyPosts from "./MyPosts/MyPosts";
 import s from './Profile.module.css'
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const  Profile = () => {
+const Profile = (props) => {
+
+    // let posts = [
+    //     {id: 1, message: 'Hi, how are you?', likesCount: '5'},
+    //     {id: 2, message: "It's my first post", likesCount: 25},
+    // ]
+
     return (
-      <div className={s.content}>
-        <div className={s.mainFotoWrapper}>
-          <img
-            alt="mainFoto"
-            src="https://img.freepik.com/premium-photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script_34663-31.jpg?size=626&ext=jpg&uid=R99814540&ga=GA1.2.1663930170.1681815990&semt=sph"
-          />
+        <div className={s.content}>
+            <ProfileInfo/>
+            <MyPosts posts={props.arrPosts}/>
         </div>
-        <div className={s.aboutMe}>
-          <img alt="avatar" src="../../ava.jpg" />
-          <div className={s.description}>
-            <h3>Ekaterina Kopylova</h3>
-            <p>City: Rostov-on-Done</p>
-            <p>Education: АГТУ им. Ползунова, г.Барнаул</p>
-            <p>Speciality: Прикладная информатика в экономике</p>
-          </div>
-        </div>
-        <MyPosts />
-      </div>
     );
 }
 
