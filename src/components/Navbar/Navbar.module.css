@@ -7,6 +7,7 @@
 .item a {
     display: block;
     margin-top: 10px;
+    margin-bottom: 10px;
     color: gray;
     font-size: 20px;
     text-decoration: none;
@@ -16,8 +17,20 @@
     color: rgb(185, 159, 14);
     font-weight: bold;
 }
+.myFriends {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    /*flex-wrap: wrap;*/
+    /*justify-content: space-between;*/
+}
+.myFriends img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+}
 
-/*div .navbar:last-child {*/
-/*    margin-top: 30px;*/
-/*}*/
+.item:last-child {
+    margin-top: 30px;
+}
 

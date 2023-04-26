@@ -1,30 +1,13 @@
 import React from 'react';
-import s from './Friends.module.css';
-import { NavLink} from "react-router-dom";
 
-const Friends = () => {
+const Friend = (props) => {
+
     return (
-        <div className={s.navbar}>
-            <div className={s.item}>
-                <NavLink to="/profile" className={({ isActive }) => isActive && s.active }>Profile</NavLink>
+            <div>
+               <img alt='foto of friend' src='https://html5css.ru/w3css/img_avatar3.png' />
+               <div>{props.state.name}</div>
             </div>
-            <div className={s.item}>
-                <NavLink to="/dialogs" className={({ isActive }) => isActive && s.active}>Messages</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to="/news" className={({ isActive }) => isActive && s.active}>News</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to="/music" className={({ isActive }) => isActive && s.active}>Music</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to="/settings" className={({ isActive }) => isActive && s.active}>Settings</NavLink>
-            </div>
-            <div className={s.item}>
-                <NavLink to="/friends" className={({ isActive }) => isActive && s.active}>Friends</NavLink>
-            </div>
-        </div>
     );
 };
 
-export default Friends;
+export default Friend;
