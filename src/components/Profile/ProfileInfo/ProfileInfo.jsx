@@ -1,5 +1,7 @@
 import React from "react";
 import s from './ProfileInfo.module.css'
+import mainFoto from '../../assets/mainFoto.avif';
+import ava from '../../assets/ava.jpg';
 
 const  ProfileInfo = () => {
     return (
@@ -7,12 +9,11 @@ const  ProfileInfo = () => {
           <div className={s.mainFotoWrapper}>
               <img
                   alt="mainFoto"
-                  src="./mainFoto.avif"
-                  // src="https://img.freepik.com/premium-photo/programming-code-abstract-technology-background-of-software-developer-and-computer-script_34663-31.jpg?size=626&ext=jpg&uid=R99814540&ga=GA1.2.1663930170.1681815990&semt=sph"
+                  src={mainFoto}
               />
           </div>
           <div className={s.descriptionBlock}>
-              <img alt="avatar" src="../../ava.jpg" />
+              <img alt="avatar" src={ava} />
               <div className={s.description}>
                   <h3>Ekaterina Kopylova</h3>
                   <p>City: Rostov-on-Done</p>
