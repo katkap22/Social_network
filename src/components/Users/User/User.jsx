@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Friend = (props) => {
+const User = (props) => {
 
     return (
             <div>
@@ -10,4 +10,4 @@ const Friend = (props) => {
     );
 };
 
-export default Friend;
+export default User;

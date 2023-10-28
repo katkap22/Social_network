@@ -40,8 +40,8 @@
     text-transform: uppercase;
 	font-weight: normal;
 	text-decoration: none;
-	color: #fff;
-	background-color:  #05cd51;
+	color: rgb(16, 78, 80);
+	background-color: #fff;
     transition: box-shadow .18s ease-out, background-color .18s ease-out,color .18s ease-out;
     
 }
@@ -52,9 +52,15 @@
 
 .myPostsBtn:hover {
 	box-shadow: 0 1px 1px 0  #cfcfcf, 0 2px 5px 0  #cfcfcf;
+    background-color: rgb(16, 78, 80);
+    color: #fff;
 }
 
 .myPostsBtn:active {
 	background-color: #efefef !important;
+}
+
+.posts {
+    margin-top: 20px;
 }
 

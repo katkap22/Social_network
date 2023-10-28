@@ -2,46 +2,51 @@ import React from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
+import * as PropTypes from "prop-types";
+import {Button} from "@mui/material";
 
+Button.propTypes = {
+    variant: PropTypes.string,
+    children: PropTypes.node
+};
 const Dialogs = (props) => {
 
-//     let dialogs = [
-//         {id: 1, name: 'Ekaterina'},
-//         {id: 2, name: "Yuliya"},
-//         {id: 3, name: 'John'},
-//         {id: 4, name: 'Natalia'},
-//         {id: 5, name: 'Vova'},
-//     ]
-//     let messages = [
-//         {id: 1, message: 'Hi'},
-//         {id: 2, message: 'How is your name?'},
-//         {id: 3, message: 'Yo'},
-//     ]
+    let state = props.dialogsPage;
 
-    let dialogsElement = props.state.dialogs.map(d => <DialogItem f={d.url} name={d.name} id={d.id}/>)
-    let messageElement = props.state.messages.map(m => <Message message={m.message} id={m.id} />)
+    let dialogsElement = state.dialogs.map(d => <DialogItem key={d.id} f={d.url} name={d.name} id={d.id}/>)
+    let messageElement = state.messages.map(m => <Message key={m.id} message={m.message} id={m.id} />)
+    let newMessageText = state.newMessageText;
 
-    let newMessageElement = React.createRef();
-    let addMessage = () => {
-        let text = newMessageElement.current.value;
-        props.addMessage(text);
-        text = '';
+    let sendMessage = () => {
+        props.sendMessage();
     }
+    let onMessageChange = (e) => {
+        let text = e.target.value;
+        props.updateNewMessageText(text)
+    }
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
                 {dialogsElement}
             </div>
             <div className={s.messages}>
-                {messageElement}
-                <textarea ref={newMessageElement}
-                          onChange={() => {}}
-                          className={s.myMessageInput}
-                          placeholder="your message"
-                          required
-                ></textarea>
-                <button onClick={ addMessage }>Add message</button>
-
+                <div>{messageElement}</div>
+                <div>
+                    <textarea
+                             value={newMessageText}
+                             onChange={onMessageChange}
+                             className={s.myMessageInput}
+                             placeholder="your message"
+                             required>
+                    </textarea>
+                </div>
+                <div>
+                    <Button
+                        variant="contained"
+                        onClick={sendMessage}>Send message
+                    </Button>
+                </div>
             </div>
         </div>
     );

@@ -27,16 +27,9 @@ const Navbar = (props) => {
                 <NavLink to="/settings" className={({ isActive }) => isActive && s.active}>Settings</NavLink>
             </div>
             <div className={s.item}>
-                <NavLink to="/friends" className={({ isActive }) => isActive && s.active}>Friends</NavLink>
-                <div className={s.myFriends}>
-                    {
-                        props.state.friends.map(f => {return<div><img alt='fotoFriens' src={f.url} /><div>{f.name}</div></div>})
-                    }
-                </div>
-
-
+                <NavLink to="/users" className={({isActive}) => isActive && s.active}>Find users</NavLink>
             </div>
-        </div>
+            </div>
     );
 };
 
