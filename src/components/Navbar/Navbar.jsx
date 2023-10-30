@@ -12,7 +12,7 @@ const Navbar = (props) => {
     return (
         <div className={s.navbar}>
             <div className={s.item}>
-                <NavLink to="/profile" className={({ isActive }) => isActive && s.active }>Profile</NavLink>
+                <NavLink to="/profile" className={({ isActive }) => isActive && s.active }>Profile new</NavLink>
             </div>
             <div className={s.item}>
                 <NavLink to="/dialogs" className={({ isActive }) => isActive && s.active}>Messages</NavLink>
