@@ -21,8 +21,8 @@ class UsersContainer extends React.Component {
             .get(`https://social-network.samuraijs.com/api/1.0/users?page=${pageNumber}&count=${this.props.pageSize}`,
                 {
                     headers: {'Content-Type': 'application/json',
-                        "withCredentials": "true",
-                        "access-control-allow-origin": "https://social-network.samuraijs.com/api/1.0/users"}
+                        withCredentials: true,
+                    }
                 }
             )
             .then(response => {
