@@ -22,6 +22,7 @@ class UsersContainer extends React.Component {
                 {
                     headers: {'Content-Type': 'application/json',
                         withCredentials: true,
+                        "API-KEY": "13c88551-3c23-4547-b973-dc25de62ae83"
                     }
                 }
             )
