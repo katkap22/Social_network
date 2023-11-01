@@ -2,7 +2,7 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
 import Profile from "./components/Profile/Profile";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {HashRouter, Route, Routes} from "react-router-dom";
 import News from "./components/News/News";
 import Music from "./components/Music/Music";
 import Settings from "./components/Settings/Settings";
@@ -12,7 +12,7 @@ import React from "react";
 
 const App = () => {
         return (
-            <BrowserRouter basename={process.env.PUBLIC_URL}>
+            <HashRouter basename={process.env.PUBLIC_URL}>
                 <div className="app-wrapper">
                     <Header/>
                     <Navbar />
@@ -28,7 +28,7 @@ const App = () => {
 
                     </div>
                 </div>
-            </BrowserRouter>
+            </HashRouter>
         );
     }
 ;
